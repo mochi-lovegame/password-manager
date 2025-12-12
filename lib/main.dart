@@ -29,22 +29,14 @@ List<Widget> createCards(int n) {
 
 Widget createCard() {
   return Container(
-    margin: EdgeInsets.only(
-        left: 10,
-        right: 10,
-        top: 0,
-        bottom: 10
-    ),
+    margin: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 10),
     decoration: BoxDecoration(
-      border: Border.all(
-          color: Colors.black,
-          width: 1
-      ),
+      border: Border.all(color: Colors.black26, width: 1),
       borderRadius: BorderRadius.circular(10),
       color: Colors.white,
       boxShadow: [
         BoxShadow(
-          color: Colors.black,
+          color: Colors.black26,
           offset: Offset(5, 5),
           blurRadius: 1.0,
           spreadRadius: 1.0,
@@ -74,17 +66,9 @@ Widget createCard() {
 
 Widget title() {
   return Container(
-    margin: EdgeInsets.only(
-        left: 10,
-        right: 10,
-        top: 10,
-        bottom: 5
-    ),
+    margin: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
     decoration: BoxDecoration(
-      border: Border.all(
-          color: Colors.black,
-          width: 2
-      ),
+      border: Border.all(color: Colors.black, width: 2),
       borderRadius: BorderRadius.circular(10),
     ),
     child: Text(
@@ -94,5 +78,3 @@ Widget title() {
     ),
   );
 }
-
-

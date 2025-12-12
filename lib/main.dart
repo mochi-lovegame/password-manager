@@ -66,15 +66,17 @@ Widget createCard() {
 
 Widget title() {
   return Container(
+    height: 40,
     margin: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
     decoration: BoxDecoration(
-      border: Border.all(color: Colors.black, width: 2),
-      borderRadius: BorderRadius.circular(10),
+      color: Colors.lightBlueAccent,
     ),
-    child: Text(
-      "パスワード管理",
-      style: TextStyle(fontStyle: FontStyle.italic),
-      textAlign: TextAlign.center,
+    child: Center(
+      child: Text(
+        "パスワード管理",
+        style: TextStyle(fontStyle: FontStyle.normal, fontSize: 20),
+        textAlign: TextAlign.center,
+      ),
     ),
   );
 }

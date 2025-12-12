@@ -11,78 +11,54 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(body: SafeArea(child: Center(child: ListView(children: createCards())))),
+      home: Scaffold(
+        body: SafeArea(
+          child: Center(child: ListView(children: createCards(10))),
+        ),
+      ),
     );
   }
 }
 
-List<Widget> createCards() {
+List<Widget> createCards(int n) {
   return [
     title(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard(),
-    createCard()
+    for(int i = 0; i < n; i++) createCard()
   ];
 }
 
 Widget createCard() {
   return Container(
-    margin: EdgeInsets.only(left: 10,right: 10,top: 0,bottom: 10),
+    margin: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 10),
     decoration: BoxDecoration(
-      border: Border.all(color: Colors.black26,width: 1),
+      border: Border.all(color: Colors.black26, width: 1),
       borderRadius: BorderRadius.circular(10),
       color: Colors.white,
       boxShadow: [
         BoxShadow(
-          color:  Colors.black26,
+          color: Colors.black26,
           offset: Offset(5, 5),
           blurRadius: 1.0,
           spreadRadius: 1.0,
-        )
-      ]
+        ),
+      ],
     ),
 
     height: 60,
     child: Row(
       children: [
         SizedBox(
-            width: 60,
-            height: 60,
-            child: Image.asset("assets/images/Lesson.jpg")),
+          width: 60,
+          height: 60,
+          child: Image.asset("assets/images/Lesson.jpg"),
+        ),
         Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("サイト",style: TextStyle(fontWeight: FontWeight.bold),),
-              Text("メールアドレス",style: TextStyle(fontSize: 10),)
-            ]
-        )
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("サイト", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text("メールアドレス", style: TextStyle(fontSize: 10)),
+          ],
+        ),
       ],
     ),
   );
@@ -90,11 +66,15 @@ Widget createCard() {
 
 Widget title() {
   return Container(
-      margin: EdgeInsets.only(left: 10,right: 10,top: 10,bottom: 5),
-      decoration: BoxDecoration(
-        border: Border.all( color:  Colors.black,width: 2),
-        borderRadius: BorderRadius.circular(10)
-      ),
-      child: Text("パスワード管理",style: TextStyle(fontStyle: FontStyle.italic),textAlign: TextAlign.center,)
+    margin: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
+    decoration: BoxDecoration(
+      border: Border.all(color: Colors.black, width: 2),
+      borderRadius: BorderRadius.circular(10),
+    ),
+    child: Text(
+      "パスワード管理",
+      style: TextStyle(fontStyle: FontStyle.italic),
+      textAlign: TextAlign.center,
+    ),
   );
 }

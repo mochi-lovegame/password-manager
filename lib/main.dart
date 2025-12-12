@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
 List<Widget> createCards(int n) {
   return [
     title(),
-    for(int i = 0; i < n; i++) createCard()
+    for(int i = 0; i < n; i++) createCard('http://hoge.com', 'hoge@hoge.com')
   ];
 }
 
-Widget createCard() {
+Widget createCard(String site, String email) {
   return Container(
     margin: EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 10),
     decoration: BoxDecoration(
@@ -55,8 +55,8 @@ Widget createCard() {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("サイト", style: TextStyle(fontWeight: FontWeight.bold)),
-            Text("メールアドレス", style: TextStyle(fontSize: 10)),
+            Text(site, style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(email, style: TextStyle(fontSize: 10)),
           ],
         ),
       ],

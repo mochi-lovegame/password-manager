@@ -1,0 +1,119 @@
+name: 機能実装
+description: 新機能の実装タスクを作成します
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 機能実装タスク
+        新機能の実装に必要な情報を入力してください。
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: 概要
+      description: 実装する機能の概要を記述してください
+      placeholder: この機能は〇〇を実現するためのものです
+    validations:
+      required: true
+
+  - type: textarea
+    id: screen-description
+    attributes:
+      label: 画面説明
+      description: 関連する画面の説明やUIの要件を記述してください
+      placeholder: |
+        - 画面名: ログイン画面
+        - 画面の目的: ユーザー認証を行う
+        - 主要なUI要素:
+          - メールアドレス入力欄
+          - パスワード入力欄
+          - ログインボタン
+        - 画面遷移: ログイン成功後、ホーム画面へ遷移
+    validations:
+      required: true
+
+  - type: textarea
+    id: screen-mockup
+    attributes:
+      label: 画面モックアップ・スクリーンショット
+      description: 画面のモックアップや参考画像があれば添付してください
+      placeholder: ドラッグ&ドロップで画像を添付できます
+    validations:
+      required: false
+
+  - type: textarea
+    id: main-task
+    attributes:
+      label: メインタスク
+      description: この機能実装の主要なタスクを記述してください
+      placeholder: |
+        例: ログイン機能の実装
+    validations:
+      required: true
+
+  - type: textarea
+    id: sub-tasks
+    attributes:
+      label: サブタスク
+      description: メインタスクを達成するために必要なサブタスクをチェックリスト形式で記述してください
+      placeholder: |
+        - [ ] APIエンドポイントの作成
+        - [ ] フロントエンドのフォーム実装
+        - [ ] バリデーション処理の追加
+        - [ ] エラーハンドリングの実装
+        - [ ] 単体テストの作成
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 受け入れ条件
+      description: この機能が完了したとみなす条件を記述してください
+      placeholder: |
+        - [ ] ユーザーがログインできる
+        - [ ] エラー時に適切なメッセージが表示される
+        - [ ] テストがすべてパスする
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: 技術的な備考
+      description: 実装に関する技術的なメモや注意点があれば記述してください
+      placeholder: |
+        - 使用するライブラリ
+        - 参考資料のURL
+        - 既存コードへの影響など
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: このタスクの優先度を選択してください
+      options:
+        - 高
+        - 中
+        - 低
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: 関連Issue・PR
+      description: 関連するIssueやPRがあればリンクを記述してください
+      placeholder: |
+        - #123
+        - #456
+    validations:
+      required: false
